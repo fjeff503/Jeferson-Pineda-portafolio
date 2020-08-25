@@ -27,8 +27,8 @@ app.post('/email', async (req, res) => {
     const nodeoutlook = require('nodejs-nodemailer-outlook')
     await nodeoutlook.sendEmail({
         auth: {
-            user: "fjeffersonpineda@hotmail.com",
-            pass: "Jefferson321!"
+            user: process.env.EMAIL,
+            pass: process.env.SEMIPASS
         },
         from: 'fjeffersonpineda@hotmail.com',
         to: 'fjeffersonpineda@hotmail.com',
