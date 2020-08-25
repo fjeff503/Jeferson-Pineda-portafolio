@@ -30,8 +30,8 @@ app.post('/email', async (req, res) => {
             user: process.env.EMAIL,
             pass: process.env.SEMIPASS
         },
-        from: 'fjeffersonpineda@hotmail.com',
-        to: 'fjeffersonpineda@hotmail.com',
+        from: process.env.EMAIL,
+        to: process.env.EMAIL,
         subject: 'Correo del curriculum online!',
         html: contentHTML,
         onError: (e) => console.log(e),
