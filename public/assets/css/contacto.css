@@ -64,3 +64,16 @@
 .contacto .formulario .boton:hover {
     background: #387bea;
 }
+
+/*(760 x x)*/
+@media screen and (max-width: 760px) {
+    .contacto {
+        width: 90%;
+    }
+
+    .contacto .formulario input[type="text"],
+    .contacto .formulario input[type="email"]{
+        width: 100%;
+    }
+}
+
