@@ -1,0 +1,80 @@
+.acerca-de {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+
+.acerca-de .contenedor .texto {
+    color: #5a5a5a;
+    font-weight: 400;
+    line-height: 1.5em;
+    width: 50%;
+    margin: 0.3em auto;
+}
+
+.acerca-de .contenedor .texto .titulo {
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 1.5em;
+    text-align: center;
+    
+}
+
+
+/*=====MEDIA QUERIS======*/
+
+
+/*2k o UHD (2048 x 1080)*/
+
+@media screen and (max-width: 2048px) {
+    .acerca-de .contenedor .texto {
+        font-size: 2em;
+    } 
+}
+
+
+/*FHD(1920 x 1080)*/
+
+@media screen and (max-width: 1920px) {
+    .acerca-de .contenedor .texto {
+        font-size: 1.5em;
+    } 
+}
+
+
+/*HD(1280 x 720)*/
+
+@media screen and (max-width: 1280px) {
+    .acerca-de .contenedor .texto {
+        font-size: 1.1em;
+    } 
+}
+
+
+/*WVGA(854 x 480)*/
+
+@media screen and (max-width: 854px) {
+    .acerca-de .contenedor .texto {
+        font-size: 0.9em;
+    } 
+}
+
+
+/*(760 x x)*/
+@media screen and (max-width: 760px) {
+    .acerca-de .contenedor .texto {
+        font-size: 0.7em;
+        width: 75%;
+    } 
+}
+
+
+/*(600 x x)*/
+
+@media screen and (max-width: 600px) {
+    .acerca-de .contenedor .texto {
+        font-size: 0.7em;
+    } 
+}

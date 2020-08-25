@@ -1,0 +1,181 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+.pic {
+    background: black;
+    width: 100%;
+    max-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.pic img {
+    display: block;
+    margin-left: 10%;
+    width: 90%;
+}
+
+.pic::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+}
+
+.pic:before {
+    opacity: .7;
+    animation: glitch 3s infinite linear;
+}
+
+
+/*
+.pic:hover:before {
+    opacity: .7;
+    animation: glitch 3s infinite linear;
+}*/
+
+@keyframes glitch {
+    0% {
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    20% {
+        top: 20%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    40% {
+        top: 40%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    60% {
+        top: 60%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    80% {
+        top: 80%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        top: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/*========Nombre y profesion =======*/
+
+.nombre {
+    /* background: #0000ff; */
+    position: absolute;
+    width: 35%;
+    color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    margin-left: 8%;
+}
+
+.nombre p {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    display: inline-block;
+    border: 12px double rgba(255, 255, 255, 0.25);
+    border-width: 12px 0;
+    padding: 1.5em 0em;
+}
+
+.nombre p span {
+    font: 700 11.5em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: 0.25em 0 0.325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    /* Clip Background Image */
+    background: url(../img/back.jpg) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Animate Background Image */
+    -webkit-text-fill-color: transparent;
+    animation: back 10s linear infinite;
+}
+
+
+/* Animate Background Image */
+
+@keyframes back {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+
+/*=====MEDIA QUERIS======*/
+
+
+/*2k o UHD (2048 x 1080)*/
+
+@media screen and (max-width: 2048px) {
+    .nombre p {
+        border: 7px double rgba(255, 255, 255, 0.25);
+        border-width: 7px 0;
+    }
+    .nombre p span {
+        font: 700 7em/1 "Oswald", sans-serif;
+    }
+}
+
+
+/*FHD(1920 x 1080)*/
+
+@media screen and (max-width: 1920px) {
+    .nombre p {
+        border: 6px double rgba(255, 255, 255, 0.25);
+        border-width: 6px 0;
+    }
+    .nombre p span {
+        font: 700 6em/1 "Oswald", sans-serif;
+    }
+}
+
+
+/*HD(1280 x 720)*/
+
+@media screen and (max-width: 1280px) {
+    .nombre p {
+        border: 3px double rgba(255, 255, 255, 0.25);
+        border-width: 3px 0;
+    }
+    .nombre p span {
+        font: 700 3em/1 "Oswald", sans-serif;
+    }
+}
+
+
+/*WVGA(854 x 480)*/
+
+@media screen and (max-width: 854px) {
+    .nombre p {
+        border: 3px double rgba(255, 255, 255, 0.25);
+        border-width: 3px 0;
+    }
+    .nombre p span {
+        font: 700 2em/1 "Oswald", sans-serif;
+    }
+}
+
+/*(500)*/
+
+@media screen and (max-width: 450px) {
+    .pic img {
+        visibility: hidden;
+    }
+    .nombre{
+        width: 85%;
+    }
+}
+
+

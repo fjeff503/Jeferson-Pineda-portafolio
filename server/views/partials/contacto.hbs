@@ -1,0 +1,26 @@
+<section class="contacto">
+    <h3 class="titulo">Contacto</h3>
+    <form action="/email" method="POST" class="formulario" onsubmit="preguntar(event, this)">
+        <input type="text" name="nameContact" id="nameContact" class="nameContact" placeholder="Nombre" required>
+        <input type="email" name="emailContact" id="emailContact" class="emailContact" placeholder="Correo" required>
+        <textarea name="messageContact" id="mensaje" class="mensaje" placeholder="Mensaje"></textarea>
+        <input type="submit" value="Enviar" class="boton" name="add" id="add">
+    </form>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+    function preguntar(event, form) {
+        event.preventDefault();
+        swal({
+            title: "Mensaje enviado con exito",
+            text: "Pronto me pondre en contacto con tigo!",
+            icon: "success"
+        }).then(function (value) {
+            if (value) form.submit();
+        });
+    }
+</script>

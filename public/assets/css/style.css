@@ -1,0 +1,13 @@
+@import 'header.css';
+@import 'scroll.css';
+@import 'skills.css';
+@import 'acercade.css';
+@import 'contacto.css';
+@import 'footer.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}

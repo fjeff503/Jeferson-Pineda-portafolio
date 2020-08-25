@@ -1,0 +1,94 @@
+footer .redes-sociales {
+    background: #1e2b38;
+    padding: 0.5% 0;
+}
+
+footer .contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+footer .redes-sociales a {
+    color: #FFF;
+    text-align: center;
+    width: 3em;
+    display: block;
+    padding: 1% 1%;
+    border-radius: 3px;
+    font-size: 1.5em;
+    margin: 0 2%;
+}
+
+footer .redes-sociales .twitter:hover {
+    background: #1da1f2;
+}
+
+footer .redes-sociales .facebook:hover {
+    background: #3b5998;
+}
+
+footer .redes-sociales .youtube:hover {
+    background: #ff0000;
+}
+
+footer .redes-sociales .github:hover {
+    background: #4078c0;
+}
+
+footer .redes-sociales .instagram:hover {
+    background: #e1306c;
+}
+
+footer .copyright{
+    width: 98%;
+    margin: auto;
+}
+
+footer .copyright p{
+    color: white; 
+    font-size: 0.8em;
+    margin-top: -20px;
+}
+
+/*=====MEDIA QUERIS======*/
+
+
+/*HD(1280 x 720)*/
+
+@media screen and (max-width: 1280px) {
+    footer .copyright p{
+        color: white; 
+        font-size: 0.5em;
+        margin-top: -10px;
+    }
+}
+
+
+/*WVGA(854 x 480)*/
+
+@media screen and (max-width: 854px) {
+    footer .copyright p{
+        color: white; 
+        font-size: 0.8em;
+        text-align: center;
+        margin-top: 0.5%;
+    }
+}
+
+
+/*(760 x x)*/
+@media screen and (max-width: 760px) {
+    .acerca-de .contenedor .texto {
+        font-size: 0.7em;
+        width: 75%;
+    } 
+}
+
+
+/*(600 x x)*/
+
+@media screen and (max-width: 600px) {
+    .acerca-de .contenedor .texto {
+        font-size: 0.7em;
+    } 
+}

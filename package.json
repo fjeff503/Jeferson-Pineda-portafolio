@@ -1,0 +1,18 @@
+{
+  "name": "portafoliojefferson",
+  "version": "1.0.0",
+  "description": "Portafolio de Jeffferson Francisco Pineda Quintanilla",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jefferson Francisco Pineda Quintanilla",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodejs-nodemailer-outlook": "^1.2.3"
+  }
+}

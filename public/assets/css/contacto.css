@@ -1,0 +1,66 @@
+.contacto {
+    padding: 3% 0%;
+    width: 70%;
+    margin: auto;
+}
+
+.contacto .titulo {
+    color: #000000;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.contacto .formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacto .formulario input[type="text"],
+.contacto .formulario input[type="email"],
+.contacto .formulario textarea {
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    padding: 1% 1%;
+    font-size: 1em;
+    color: #a4a4a4;
+}
+
+.contacto .formulario input[type="text"]:focus,
+.contacto .formulario input[type="email"]:focus,
+.contacto .formulario textarea:focus {
+    border: 2px solid #3895ea;
+}
+
+.contacto .formulario input[type="text"],
+.contacto .formulario input[type="email"] {
+    width: 49%;
+    margin-bottom: 1.5%;
+}
+
+.contacto .formulario textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 1.5%;
+    height: 6em;
+    min-height: 6em;
+    max-height: 12em;
+}
+
+.contacto .formulario .boton {
+    margin: auto;
+    background: #3895ea;
+    color: #FFF;
+    border: none;
+    border-radius: 3px;
+    padding: 1.5% 3.5%;
+    cursor: pointer;
+}
+
+.contacto .formulario .boton:hover {
+    background: #387bea;
+}

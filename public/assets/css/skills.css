@@ -1,0 +1,411 @@
+.progressCircle {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
+/*contenedor de todo*/
+
+.container {
+    max-width: 2000px;
+    padding: 5% 5% 10% 5%;
+    position: relative;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 80px;
+}
+
+
+/*titulo*/
+
+.container .titulo {
+    grid-column: 1 / -1;
+    padding: 10%;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+
+/*contenedor 2 colores*/
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover {
+    transform: translateY(-10px);
+}
+
+.container .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /**/
+    z-index: 1000;
+}
+
+.percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.percent .number h2 {
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.card:hover .percent .number h2 {
+    font-size: 60px;
+}
+
+.percent .number h2 span {
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+.card .box .text {
+    position: relative;
+    margin-top: 20px;
+    font-weight: 700;
+    font-weight: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    /**/
+    transform: translate(3.5%, 3.5%);
+}
+
+svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+
+/*=========COLORES==========*/
+
+
+/*WHITE*/
+
+.white .progressCircle {
+    background: #efefef;
+}
+
+
+/*titulo*/
+
+.white .container .titulo {
+    color: black;
+}
+
+
+/*contenedor 2 colores*/
+
+.white .container .card {
+    background: linear-gradient(0deg, #dfdfdf, #d9d9d9, #dfdfdf);
+}
+
+.white .container .card:hover {
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.5);
+    /**/
+}
+
+.white .container .card:before {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.white .percent {
+    box-shadow: inset 0 0 50px #FFF;
+    background: #d9d9d9;
+}
+
+.white .percent .number h2 {
+    color: #858988;
+}
+
+.white .card:hover .percent .number h2 {
+    color: #000;
+}
+
+.white .percent .number h2 span {
+    color: #858988;
+}
+
+.white .card:hover .percent .number h2 span {
+    color: #000;
+}
+
+.white .card .box .text {
+    position: relative;
+    color: #858988;
+}
+
+.white .card:hover .text {
+    color: #000;
+}
+
+.white svg circle {
+    stroke: #e6e6e6;
+}
+
+
+/*Calculamos los porcentajes*/
+
+
+/*(293-(porcentaje/100)x293)*/
+
+.white .card:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: 29.30%;
+    stroke: #FF5533
+}
+
+.white .card:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: 87.90%;
+    stroke: #2FB7FF
+}
+
+.white .card:nth-child(4) svg circle:nth-child(2) {
+    stroke-dashoffset: 146.5%;
+    stroke: #E1C91E
+}
+
+
+/*DARK*/
+
+.dark .progressCircle {
+    background: #101010;
+}
+
+
+/*titulo*/
+
+.dark .container .titulo {
+    color: white;
+}
+
+
+/*contenedor 2 colores*/
+
+.dark .container .card {
+    background: linear-gradient(0deg, #1B1B1B, #222, #1B1B1B);
+}
+
+.dark .container .card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.dark .container .card:before {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.dark .percent {
+    box-shadow: inset 0 0 50px #000;
+    background: #222;
+}
+
+.dark .percent .number h2 {
+    color: #777;
+}
+
+.dark .card:hover .percent .number h2 {
+    color: #fff;
+}
+
+.dark .percent .number h2 span {
+    color: #777;
+}
+
+.dark .card:hover .percent .number h2 span {
+    color: #FFF;
+}
+
+.dark .card .box .text {
+    color: #777;
+}
+
+.dark .card:hover .text {
+    color: #FFF;
+}
+
+.dark svg circle {
+    stroke: #191919;
+}
+
+
+/*Calculamos los porcentajes*/
+
+
+/*(293-(porcentaje/100)x293)*/
+
+.dark .card:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: 87.90%;
+    stroke: #E1C91E;
+}
+
+.dark .card:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: 102.55%;
+    stroke: #00FFFF;
+}
+
+.dark .card:nth-child(4) svg circle:nth-child(2) {
+    stroke-dashoffset: 117.20%;
+    stroke: #FF00FF;
+}
+
+
+/*=====MEDIA QUERIS======*/
+
+
+/*2k o UHD (2048 x 1080)*/
+
+@media screen and (max-width: 2048px) {
+    .container {
+        gap: 40px;
+        padding: 4% 5% 8% 5%;
+    }
+    /*titulo*/
+    .container .titulo {
+        padding: 2% 0 1% 0;
+        letter-spacing: 3px;
+        font-size: 1.7em;
+    }
+}
+
+
+/*FHD(1920 x 1080)*/
+
+@media screen and (max-width: 1920px) {
+    .container {
+        gap: 35px;
+        padding: 1% 5% 6% 5%;
+    }
+    /*titulo*/
+    .container .titulo {
+        font-size: 1.6em;
+    }
+}
+
+
+/*HD(1280 x 720)*/
+
+@media screen and (max-width: 1280px) {
+    .container {
+        gap: 35px;
+        padding: 1% 5% 6% 5%;
+    }
+    .container .card {
+        height: 225px;
+    }
+    /*titulo*/
+    .container .titulo {
+        font-size: 1.3em;
+    }
+    .card .box .text {
+        margin-top: 15px;
+        font-weight: 500;
+        font-weight: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+    .percent .number h2 {
+        font-weight: 500;
+        font-size: 35px;
+    }
+    .card:hover .percent .number h2 {
+        font-size: 50px;
+    }
+}
+
+
+/*WVGA(854 x 480)*/
+
+@media screen and (max-width: 854px) {
+    .progressCircle {
+        height: auto;
+    }
+}
+
+
+/*(760 x x)*/
+
+@media screen and (max-width: 760px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/*(600 x x)*/
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    }
+    /*titulo*/
+    .container .titulo {
+        font-size: 1.3em;
+    }
+    .card .box .text {
+        margin-top: 15px;
+        font-weight: 400;
+        font-weight: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+    .percent .number h2 {
+        font-weight: 400;
+        font-size: 30px;
+    }
+    .card:hover .percent .number h2 {
+        font-size: 45px;
+    }
+}
