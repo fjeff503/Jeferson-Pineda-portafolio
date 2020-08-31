@@ -13,8 +13,8 @@ header {
 
 .pic img {
     display: block;
-    margin-left: 10%;
-    width: 90%;
+    margin-left: 0%;
+    width: 100%;
 }
 
 .pic::before {
@@ -63,6 +63,21 @@ header {
     }
 }
 
+
+
+.perfil {
+    /* background: #0000ff; */
+    position: absolute;
+    width: 20%;
+    color: rgba(255, 255, 255, 0.50);
+    margin-left: 70%;
+    
+}
+
+.perfil img{
+    width: 100%;
+    border-radius: 100%;
+}
 
 /*========Nombre y profesion =======*/
 
@@ -171,6 +186,9 @@ header {
 
 @media screen and (max-width: 450px) {
     .pic img {
+        visibility: hidden;
+    }
+    .perfil img{
         visibility: hidden;
     }
     .nombre{
