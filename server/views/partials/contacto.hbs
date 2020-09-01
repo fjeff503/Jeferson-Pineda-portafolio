@@ -20,7 +20,11 @@
             text: "Pronto me pondre en contacto con tigo!",
             icon: "success"
         }).then(function (value) {
-            if (value) form.submit();
+            if (value) {
+                form.submit();
+            } else {
+                form.submit();
+            }
         });
     }
 </script>
